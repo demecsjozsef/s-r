@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: beige;
+    font-size: 10pt;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(teglafal.jpg);
+}
+main{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0px auto;
+    background-color: #333333;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'h h h'
+    'a a n'
+    'f f f';
+}
+header{
+    grid-area: h;
+    background-image: url(beer.jpg);
+    height: 300px;
+    background-size: cover;
+
+}
+header h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    
+}
+article{
+    grid-area: a;
+    font-size: 15px;
+    text-align: justify;
+}
+article h2{
+    font-size: 20px;
+}
+#kep{
+    float: left;
+    width: 30%;
+    border: 1px solid silver;
+    padding: 10px ;
+    border-style: groove;
+    border-radius: 5px;
+
+}
+article ul li{
+    list-style: square;
+    margin: 0px auto;
+}
+nav{
+    grid-area: n;
+    color: orangered;
+}
+footer{
+    grid-area: f;
+    background-color: gray;
+    text-align: center;
+    padding: 10px;
+}
+nav>ul>li{
+    border: 1px solid;
+    border-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+nav ul li:hover{
+    background-color: aliceblue;
+}
+li a{
+    text-decoration: none;
+    color: red;
+}
+@media screen and (max-width: 700px){
+    main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'h'
+    'n'
+    'a'
+    'f';}
+}
